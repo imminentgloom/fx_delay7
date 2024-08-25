@@ -12,7 +12,7 @@ FxDelay : FxBase {
             delaysend: 0.8,
             highpass: 20,
             lowpass: 5000
-        ), nil, 0.5);
+        ), nil, 1);
         ^ret;
     }
 
