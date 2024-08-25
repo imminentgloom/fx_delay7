@@ -1,7 +1,7 @@
-//delayyyyyyyy by @cfd90
+//Delay7 by @cfd90
 //modified and ported to fx mod for norns by @imminent gloom
 
-FxDelayyyyyyyy : FxBase {
+FxDelay7 : FxBase {
 
     *new {
         var ret = super.newCopyArgs(nil, \none, (
@@ -22,15 +22,15 @@ FxDelayyyyyyyy : FxBase {
     }
 
     subPath {
-        ^"/fx_delayyyyyyyy";
+        ^"/fx_Delay7";
     }
 
     symbol {
-        ^\fxDelayyyyyyyy;
+        ^\fxDelay7;
     }
 
     addSynthdefs {
-        SynthDef(\fxDelayyyyyyyy, {|inBus, outBus|
+        SynthDef(\fxDelay7, {|inBus, outBus|
 
             var time, feedback, sep, mix, delaysend, highpass, lowpass, out;
 
