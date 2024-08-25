@@ -22,15 +22,15 @@ FxDelay7 : FxBase {
 	}
 
 	subPath {
-		^"/fx_Delay7";
+		^"/Fx_Delay7";
 	}
 
 	symbol {
-		^\fxDelay7;
+		^\FxDelay7;
 	}
 
 	addSynthdefs {
-		SynthDef(\fxDelay7, {|inBus, outBus|
+		SynthDef(\FxDelay7, {|inBus, outBus|
 
 			var time, feedback, sep, mix, delaysend, highpass, lowpass, out;
 
