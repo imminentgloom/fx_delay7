@@ -1,4 +1,4 @@
---delay7 by @cfd90
+--delayyyyyyyy by @cfd90
 --modified and ported to fx mod for norns by @imminent gloom
 
 local fx = require("fx/lib/fx")
