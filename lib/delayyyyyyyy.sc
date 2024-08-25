@@ -3,8 +3,8 @@
 
 FxDelay : FxBase {
 
-    *new { 
-        var ret = super.newCopyArgs(nil, \none, (    
+    *new {
+        var ret = super.newCopyArgs(nil, \none, (
             time: 0.55,
             feedback: 0.8,
             sep: 0,
@@ -22,15 +22,15 @@ FxDelay : FxBase {
 
     subPath {
         ^"/fx_delayyyyyyyy";
-    }  
+    }
 
     symbol {
         ^\fxDelayyyyyyyy;
     }
-    
+
     addSynthdefs {
         SynthDef(\fxDelayyyyyyyy, {|inBus, outBus|
-            arg out, time = 0.55, feedback = 0.8, sep = 0, mix = 0.4, delaysend = 0.8, highpass = 20, lowpass = 5000;
+            //arg out, time = 0.55, feedback = 0.8, sep = 0, mix = 0.4, delaysend = 0.8, highpass = 20, lowpass = 5000;
 
      		var t = Lag.kr(time, 0.2);
      		var f = Lag.kr(feedback, 0.2);
@@ -38,7 +38,7 @@ FxDelay : FxBase {
 		    var d = Lag.kr(delaysend, 0.2);
 		    var h = Lag.kr(highpass, 0.2);
     		var l = Lag.kr(lowpass, 0,2);
-    		 
+
     		var input = SoundIn.ar([0, 0]);
 			var fb = LocalIn.ar(2);
 			var output = LeakDC.ar((fb * f) + (input * d));
