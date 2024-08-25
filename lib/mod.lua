@@ -9,7 +9,7 @@ local FxDelay7 = fx:new{
 }
 
 function FxDelay7:add_params()
-    params:add_separator("fx_delay7", "fx delay7")
+    	params:add_separator("fx_delay7", "fx delay7")
 	FxDelay7:add_slot("fx_delay7_slot", "slot")
 	FxDelay7:add_control("fx_delay7_time", "time", "time", controlspec.new(0.0001, 2, "exp", 0, 0.3, "s"))
 	FxDelay7:add_control("fx_delay7_feedback", "feedback", "feedback", controlspec.new(0, 1, "lin", 0.01, 0, ""))
