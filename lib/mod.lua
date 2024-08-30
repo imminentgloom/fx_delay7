@@ -1,4 +1,4 @@
---delayyyyyyyy by @cfd90
+--delay7 by @cfd90
 --modified and ported to fx mod for norns by @imminent gloom
 
 local fx = require("fx/lib/fx")
@@ -35,28 +35,28 @@ end
 -- end post-init hack block
 
 
-local FxDelayyyyyyyy = fx:new{
-    subpath = "/fx_delayyyyyyyy"
+local FxDelay7 = fx:new{
+    subpath = "/fxdelay7"
 }
 
-function FxDelayyyyyyyy:add_params()
-    params:add_separator("fx_delayyyyyyyy", "fx delayyyyyyyy")
+function FxDelay7:add_params()
+    params:add_separator("fxdelay7", "fx delay7")
 	
-	FxDelayyyyyyyy:add_slot("fx_delayyyyyyyy_slot", "slot")
-	FxDelayyyyyyyy:add_control("fx_delayyyyyyyy_time", "time", "time", controlspec.new(0.0001, 2, "exp", 0, 0.3, "s"))
-	FxDelayyyyyyyy:add_control("fx_delayyyyyyyy_feedback", "feedback", "feedback", controlspec.new(0, 1, "lin", 0.01, 0, ""))
-	FxDelayyyyyyyy:add_control("fx_delayyyyyyyy_sep", "sep", "<->", controlspec.new(0, 1, "lin", 0.01, 0, ""))
-	FxDelayyyyyyyy:add_control("fx_delayyyyyyyy_mix", "mix", "mix", controlspec.new(0, 1, "lin", 0.01, 0, ""))
-	FxDelayyyyyyyy:add_control("fx_delayyyyyyyy_send", "send", "send", controlspec.new(0, 1, "lin", 0.01, 0, ""))
-	FxDelayyyyyyyy:add_control("fx_delayyyyyyyy_hp", "hp", "hp", controlspec.new(20, 10000, "exp", 0, 20, "Hz"))
-	FxDelayyyyyyyy:add_control("fx_delayyyyyyyy_lp", "lp", "lp", controlspec.new(20, 10000, "exp", 0, 5000, "Hz"))
+	FxDelay7:add_slot("fxdelay7_slot", "slot")
+	FxDelay7:add_control("fxdelay7_time", "time", "time", controlspec.new(0.0001, 2, "exp", 0, 0.3, "s"))
+	FxDelay7:add_control("fxdelay7_feedback", "feedback", "feedback", controlspec.new(0, 1, "lin", 0.01, 0, ""))
+	FxDelay7:add_control("fxdelay7_sep", "sep", "<->", controlspec.new(0, 1, "lin", 0.01, 0, ""))
+	FxDelay7:add_control("fxdelay7_mix", "mix", "mix", controlspec.new(0, 1, "lin", 0.01, 0, ""))
+	FxDelay7:add_control("fxdelay7_send", "send", "send", controlspec.new(0, 1, "lin", 0.01, 0, ""))
+	FxDelay7:add_control("fxdelay7_hp", "hp", "hp", controlspec.new(20, 10000, "exp", 0, 20, "Hz"))
+	FxDelay7:add_control("fxdelay7_lp", "lp", "lp", controlspec.new(20, 10000, "exp", 0, 5000, "Hz"))
 end
 
-mod.hook.register("script_post_init", "fx delayyyyyyyy mod post init", function()
-    FxDelayyyyyyyy:add_params()
+mod.hook.register("script_post_init", "fx delay7 mod post init", function()
+    FxDelay7:add_params()
 end)
 
-mod.hook.register("script_post_cleanup", "delayyyyyyyy mod post cleanup", function()
+mod.hook.register("script_post_cleanup", "delay7 mod post cleanup", function()
 end)
 
-return FxDelayyyyyyyy
+return FxDelay7
